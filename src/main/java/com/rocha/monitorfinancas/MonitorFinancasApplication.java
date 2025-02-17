@@ -1,4 +1,4 @@
-package com.rocha.monitor_financas;
+package com.rocha.monitorfinancas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
