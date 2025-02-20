@@ -1,4 +1,4 @@
 package com.rocha.monitorfinancas.model.dto;
 
-public record DespesaDTO(double valor, String descricao, String categoria, String data) {
+public record DespesaDTO(double valor, String descricao, CategoriaDTO categoria, String data) {
 }
