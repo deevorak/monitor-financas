@@ -25,7 +25,7 @@ public class CategoryController {
         List<Category> categories = categoryService.findAll();
 
         return !CollectionUtils.isEmpty(categories) ? ResponseEntity.ok().body(categories.stream()
-                .map(c -> new CategoryDTO(c.getId(), c.getAbbreviation(), c.getDescription()))
+                .map(c -> new CategoryDTO(c.getId(), c.getAbbreviation(), c.getDescription(), c.getType().toString(), c.getBudget()))
                 .collect(Collectors.toList())) : ResponseEntity.noContent().build();
     }
 }

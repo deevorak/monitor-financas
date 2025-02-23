@@ -1,5 +1,6 @@
 package com.rocha.monitorfinancas.model.jpa;
 
+import com.rocha.monitorfinancas.model.enums.GroupType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,7 +24,14 @@ public class Category implements Serializable {
     @SequenceGenerator(name = "category_seq", sequenceName = "category_seq", allocationSize = 1)
     @Id
     private Long id;
+
     private String abbreviation;
+
     private String description;
+
+    @Enumerated(EnumType.STRING)
+    private GroupType type;
+
+    private Double budget;
 
 }
